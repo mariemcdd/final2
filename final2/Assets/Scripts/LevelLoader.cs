@@ -10,6 +10,8 @@ public class LevelLoader : MonoBehaviour
 
     [SerializeField] private CrossFade _crossFade;
 
+    [SerializeField] private EndPoint _endPoint;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +21,7 @@ public class LevelLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(_playerHealth.GetPlayerHealth() <= 0)
+        if(_playerHealth.GetPlayerHealth() <= 0 || _endPoint.IsCompleted())
         {
             _crossFade.FadeIn();
             StartCoroutine("EndLevel");
