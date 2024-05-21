@@ -101,4 +101,12 @@ public class PlayerController : MonoBehaviour
             other.gameObject.SetActive(false);
         }
     }
+
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if(hit.gameObject.CompareTag("Door"))
+        {
+            hit.gameObject.GetComponent<Doors>().OpenTheDoor();
+        }
+    }
 }
