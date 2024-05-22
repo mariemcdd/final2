@@ -12,7 +12,7 @@ public class Ammo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _ammoBoxAmount = Random.Range(3, 7);
+        _ammoBoxAmount = Random.Range(5, 10);
         ammoText.text = "Ammo: " + _ammoAmount.ToString();
     }
 
